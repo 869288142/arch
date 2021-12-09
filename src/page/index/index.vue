@@ -39,36 +39,36 @@ export default defineComponent({
 
 <style lang="scss">
 .goods-item {
-    border-bottom: 1px solid gray;
-    margin-top: 10px;
+    // border-bottom: 1px solid gray;
+    // margin-top: 10px;
     .main-info {
-        display: flex;
-        align-items: center;
+        // display: flex;
+        // align-items: center;
 
         .goods-img {
-            width: 50px;
-            height: 50px;
+            // width: 50px;
+            // height: 50px;
         }
 
         .out-stock {
-            font-size: 12px;
-            background: pink;
-            color: white;
-            margin-left: 20px;
+            // font-size: 12px;
+            // background: pink;
+            // color: white;
+            // margin-left: 20px;
         }
     }
     .detail-info {
-        display: flex;
-        justify-content: space-between;
+        // display: flex;
+        // justify-content: space-between;
         .discount {
-            color: red;
+            // color: red;
         }
         .tag-wrap {
             .tag {
-                margin-left: 5px;
-                font-size: 13px;
-                background: gray;
-                color: white;
+                // margin-left: 5px;
+                // font-size: 13px;
+                // background: gray;
+                // color: white;
             }
         }
     }
