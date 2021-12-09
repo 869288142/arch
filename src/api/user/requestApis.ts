@@ -1,7 +1,9 @@
-import axios from '../../request/'
+import axios from "../../request/";
 
-import { userTranslator } from './translators'
+import { UserDTO, userTranslator } from "./translators";
 
 export function getUserDetail() {
-    return axios('/user/detail').then(data => userTranslator(data));
+  return axios.get<UserDTO>("/user/detail").then((data) => {
+    return userTranslator(data.data)
+  }  );
 }

@@ -1,10 +1,11 @@
 /**
  * 商品类
  */
- import { OUT_STACK_STATUS, SHOW_IN_LIST_TAG_TYPE, DISCOUNT_ACTIVITY_TYPE } from '@/shared/contants/good';
+ import { GoodImp, Tag } from '@/api/goods/translators';
+import { OUT_STACK_STATUS, SHOW_IN_LIST_TAG_TYPE, DISCOUNT_ACTIVITY_TYPE } from '@/shared/contants/good';
 
- export default class Goods {
-     constructor(goods = {}) {
+ export default class Goods implements GoodImp{
+     constructor(goods: GoodImp) {
          this.id = goods.id
          this.name = goods.name
          this.price = goods.price
@@ -15,6 +16,15 @@
          this.mainPicUrl = goods.mainPicUrl
          this.tags = goods.tags
      }
+     id: string;
+     name: string;
+     price: string;
+     status: number;
+     activityType: number;
+     description: string;
+     brandName: string;
+     mainPicUrl: string;
+     tags: Tag[];
  
      isOutStock() {
          return this.status && this.status === OUT_STACK_STATUS;

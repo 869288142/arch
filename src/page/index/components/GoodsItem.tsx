@@ -1,4 +1,7 @@
-export default ({ goods }) => {
+import Goods from '@/domain/good/entity/goods';
+export default ({ goods } : {
+  goods: Goods
+}) => {
   return (
     <div class="border-b border-gray-500 border-solid">
       <div class="flex items-center">

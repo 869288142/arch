@@ -2,37 +2,33 @@
 import Nav from './components/Nav.vue';
 import GoodsItem from './components/GoodsItem';
 import { GoodsService } from './services';
-import { defineComponent } from 'vue'
+import { defineComponent, onMounted, ref } from 'vue'
+import Goods from '@/domain/good/entity/goods';
 export default defineComponent({
-    data() {
-        return {
-            msg: 'Hello world!',
-            goodsList: null
-        }
-    },
-    components: {
-        Nav,
-        GoodsItem
-    },
-    mounted() {
-        GoodsService.getGoodsList().then(list => {
-            this.goodsList = list
+    setup() {
+        let goodsList: Goods[] | null = null
+        const count = ref(1)
+        onMounted(async () => {
+            goodsList = await GoodsService.getGoodsList()
+            count.value++
         })
-    },
-    render() {
-        return (
-            <div>
+
+        return () => (
+            <div data-c={`${count.value}`}>
                 <Nav />
                 <h3 > 商品列表 </h3>
                 <div class="goods-list" >
-                    {this?.goodsList?.map(data => {
+                    {goodsList?.map(data => {
                         return (
                             <GoodsItem goods={data} />
                         )
                     })}
                 </div>
             </div>)
-  },
-
+    },
+    components: {
+        Nav,
+        GoodsItem
+    },
 })
 </script>

@@ -1,7 +1,5 @@
 const goodsListData = {
-    c: 0,
-    m: '',
-    d: [
+    goods: [
         {
             id: 'UDJEPGNSS1',
             goodsName: '商品名称商品名称商品名称',
