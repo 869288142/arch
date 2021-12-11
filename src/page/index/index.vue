@@ -6,19 +6,17 @@ import { defineComponent, onMounted, ref } from 'vue'
 import Goods from '@/domain/good/entity/goods';
 export default defineComponent({
     setup() {
-        let goodsList: Goods[] | null = null
-        const count = ref(1)
+        let goodsList  = ref<Goods[] | null>(null)
         onMounted(async () => {
-            goodsList = await GoodsService.getGoodsList()
-            count.value++
+            goodsList.value = await GoodsService.getGoodsList()
         })
 
         return () => (
-            <div data-c={`${count.value}`}>
+            <div >
                 <Nav />
                 <h3 > 商品列表 </h3>
                 <div class="goods-list" >
-                    {goodsList?.map(data => {
+                    {goodsList.value?.map(data => {
                         return (
                             <GoodsItem goods={data} />
                         )
