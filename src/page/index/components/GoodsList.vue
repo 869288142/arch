@@ -4,23 +4,14 @@
         <GoodsItem v-for="goods in goodsList" :goods="goods" />
     </div>
 </template>
-<script lang="ts">
+<script lang="ts" setup>
 import GoodsItem from './GoodsItem';
 import { GoodsService } from '../services';
-import { defineComponent, ref } from 'vue'
+import { ref } from 'vue'
 import Goods from '@/domain/good/entity/goods';
-export default defineComponent({
-    async setup() {
-        let goodsList = ref<Goods[] | null>(null)
 
-        goodsList.value = await GoodsService.getGoodsList()
+let goodsList = ref<Goods[] | null>(null)
 
-        return {
-            goodsList
-        }
-    },
-    components: {
-        GoodsItem
-    },
-})
+goodsList.value = await GoodsService.getGoodsList()
+
 </script>
