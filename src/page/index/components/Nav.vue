@@ -22,7 +22,11 @@ user.value = await UserService.getUserDetail()
 
 
 function getUserTip(user: User | null) {
-    // @ts-expect-error
+
+    if (!user) {
+        return ''
+    }
+
     return (user?.type === SIGN_USER_TYPE ? `尊敬的${user?.getUserTypeTitle()}：` : null) + user?.name
 }
 
