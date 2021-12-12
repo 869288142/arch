@@ -10,7 +10,7 @@
         </div>)
     </div>
 </template>
-<script lang="tsx" setup>
+<script lang="ts" setup>
 import { ref } from 'vue';
 import { SIGN_USER_TYPE } from '@/shared/contants/user';
 import User from '@/domain/user/entity/user';
