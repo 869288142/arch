@@ -1,5 +1,5 @@
-import { getUserDetail } from '@/domain/user/repository/requestApis';
-import User from '../entity/user';
+import { getUserDetail } from '@/domain/user/repository/user.repository';
+import User from '../entity/user.entity';
 
 class UserService {
     /**

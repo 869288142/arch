@@ -1,5 +1,5 @@
-import { getGoodsList } from '@/domain/good/repository/requestApis';
-import Goods from '../entity/goods';
+import { getGoodsList } from '@/domain/good/repository/goods.repository';
+import Goods from '../entity/goods.entity';
 
 class GoodsService {
 

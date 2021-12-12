@@ -13,7 +13,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 import { SIGN_USER_TYPE } from '@/shared/contants/user';
-import User from '@/domain/user/entity/user';
+import User from '@/domain/user/entity/user.entity';
 import { UserService } from '../services';
 
 let user = ref<null | User>(null)

@@ -8,7 +8,7 @@
 import GoodsItem from './GoodsItem';
 import { GoodsService } from '../services';
 import { ref } from 'vue'
-import Goods from '@/domain/good/entity/goods';
+import Goods from '@/domain/good/entity/goods.entity';
 
 let goodsList = ref<Goods[] | null>(null)
 

@@ -1,4 +1,4 @@
-import Goods from '@/domain/good/entity/goods';
+import Goods from '@/domain/good/entity/goods.entity';
 export default ({ goods } : {
   goods: Goods
 }) => {
