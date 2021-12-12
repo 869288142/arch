@@ -1,5 +1,6 @@
 import axios from '../../../request'
-import { GoodDTO, goodsTranslator } from './translators';
+import { goodsTranslator } from './translators';
+import { GoodDTO } from "./model/Good.model";
 
 export function getGoodsList() {
     return axios.get<{ goods: GoodDTO [] }>('/goods/list').then(v=>{

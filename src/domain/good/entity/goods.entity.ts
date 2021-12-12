@@ -1,7 +1,8 @@
 /**
  * 商品类
  */
-import { GoodImp, Tag } from "@/domain/good/repository/translators";
+import { GoodImp } from "@/domain/good/repository/translators";
+import { Tag } from "@/domain/good/repository/model/Tag.model";
 import {
   OUT_STACK_STATUS,
   SHOW_IN_LIST_TAG_TYPE,
