@@ -1,4 +1,4 @@
-import axios from '../../request/'
+import axios from '../../../request'
 import { GoodDTO, goodsTranslator } from './translators';
 
 export function getGoodsList() {

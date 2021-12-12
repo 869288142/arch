@@ -15,34 +15,9 @@ Since TypeScript cannot handle type information for `.vue` imports, they are shi
 
 
 
-components
-directives
-    问题：
-        1. 是否全部放全局(可发现和可追寻)
-    方案：
-        不包含业务放全局
-        包含业务放模块内
 
 
-样式
-交互
-数据
 
 
-<!-- 请求库 -->
-
-<!-- 如何组织请求 -->
-
-<!-- style -->
-
-<!-- vuex -->
-<!-- request -->
 <!-- api -->
-
-<!-- router -->
-
-<!-- 如何处理shared -->
-<!-- 功能代码 -->
-
-
-<!-- 如何在代码中体现业务 -->
+<!-- vuex -->

@@ -1,5 +1,5 @@
-import GoodsService from '@/domain/good/goodsService';
-import UserService from '@/domain/user/userService';
+import GoodsService from '@/domain/good/service/goodsService';
+import UserService from '@/domain/user/service/userService';
 
 export {
     GoodsService,

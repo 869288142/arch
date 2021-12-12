@@ -1,4 +1,4 @@
-import axios from "../../request/";
+import axios from "../../../request";
 
 import { UserDTO, userTranslator } from "./translators";
 

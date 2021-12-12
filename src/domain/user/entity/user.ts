@@ -1,7 +1,7 @@
 /**
  * 用户类
  */
-import { UserImp } from "@/api/user/translators";
+import { UserImp } from "@/domain/user/repository/translators";
 import {
   NEED_REMIND_VIP_LACK_DAYS,
   USER_TYPE_MAP,
