@@ -19,5 +19,22 @@ Since TypeScript cannot handle type information for `.vue` imports, they are shi
 
 
 
-<!-- api -->
-<!-- vuex -->
+html
+    auto close tag
+    auto rename tag
+css
+    css peek
+
+js
+    runner
+
+code spell checker
+
+file size
+import cosr
+
+git 
+    gitlen
+
+
+
