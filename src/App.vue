@@ -3,17 +3,18 @@
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 // import HelloWorld from './components/HelloWorld.vue'
 import index from './page/index/index.vue';
+import { useSharedMouse } from './hooks';
 
-import { useTitle } from '@vueuse/core'
+const { x, y } = useSharedMouse()
 
-const title = useTitle('Hello')
 
 
 
 </script>
 
 <template>
-  <index></index>
+  <index ></index>
+  <div> {{ x }}  {{y}}</div>
   <!-- <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" /> -->
 </template>
 
