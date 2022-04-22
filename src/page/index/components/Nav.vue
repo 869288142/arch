@@ -11,14 +11,12 @@
     </div>
 </template>
 <script lang="ts" setup>
-import { ref } from 'vue';
 import { SIGN_USER_TYPE } from '@/shared/contants/user';
 import User from '@/domain/user/entity/user.entity';
 import { UserService } from '../services';
+let user = $ref<null | User>(null)
 
-let user = ref<null | User>(null)
-
-user.value = await UserService.getUserDetail()
+user = await UserService.getUserDetail()
 
 
 function getUserTip(user: User | null) {
