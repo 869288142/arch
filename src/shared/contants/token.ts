@@ -1,0 +1,1 @@
+export const goodsServiceToken = Symbol('goodsServiceToken')

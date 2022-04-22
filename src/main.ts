@@ -1,8 +1,13 @@
 import { createApp } from "vue";
 import App from "./App.vue";
 import { createPinia } from "pinia";
-createApp(App).use(createPinia()).mount("#app");
+import { goodsServiceToken } from "./shared/contants/token";
+import { GoodsService } from "./page/index/services";
+const app = createApp(App)
 
+app.provide(/* key */ goodsServiceToken, /* value */ GoodsService)
+
+app.use(createPinia()).mount("#app");
 
 
 
