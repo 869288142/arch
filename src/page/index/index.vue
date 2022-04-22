@@ -18,16 +18,7 @@
         </suspense>
     </div>
 </template>
-<script lang="tsx">
+<script lang="tsx" setup>
 import Nav from './components/Nav.vue';
 import GoodsList from './components/GoodsList.vue';
-import { defineComponent } from 'vue'
-export default defineComponent({
-    setup() {
-    },
-    components: {
-        Nav,
-        GoodsList
-    },
-})
 </script>
