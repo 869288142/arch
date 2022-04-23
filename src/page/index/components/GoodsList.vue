@@ -12,8 +12,9 @@ import Goods from "@/domain/good/entity/goods.entity";
 import { useSharedMouse } from "@/hooks";
 import { inject } from 'vue'
 import { goodsServiceToken } from "@/shared/contants/token";
+import  { GoodsService as  GoodsServiceImp} from "../services";
 
-const GoodsService = inject(goodsServiceToken)
+const GoodsService = inject<typeof GoodsServiceImp>(goodsServiceToken)
 
 let goodsList = $ref<Goods[] | null>(null);
 
