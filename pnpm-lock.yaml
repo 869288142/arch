@@ -8,12 +8,9 @@ specifiers:
   axios: ^0.27.2
   dayjs: ^1.11.3
   express: ^4.18.1
-  inversify: ^6.0.1
-  inversify-binding-decorators: ^4.0.0
   mocker-api: ^2.9.5
   pinia: ^2.0.14
   postcss: ^8.4.14
-  reflect-metadata: ^0.1.13
   sass: ^1.53.0
   tailwindcss: ^3.1.5
   typescript: ^4.7.4
@@ -25,10 +22,7 @@ dependencies:
   '@vueuse/core': registry.npmmirror.com/@vueuse/core/8.9.1_vue@3.2.37
   axios: registry.npmmirror.com/axios/0.27.2
   dayjs: registry.npmmirror.com/dayjs/1.11.3
-  inversify: registry.npmmirror.com/inversify/6.0.1
-  inversify-binding-decorators: registry.npmmirror.com/inversify-binding-decorators/4.0.0
   pinia: registry.npmmirror.com/pinia/2.0.14_typescript@4.7.4+vue@3.2.37
-  reflect-metadata: registry.npmmirror.com/reflect-metadata/0.1.13
   sass: registry.npmmirror.com/sass/1.53.0
   vue: registry.npmmirror.com/vue/3.2.37
 
@@ -1919,18 +1913,6 @@ packages:
     version: 2.0.4
     dev: true
 
-  registry.npmmirror.com/inversify-binding-decorators/4.0.0:
-    resolution: {integrity: sha512-r8au/oH3vS7ttHj0RivAznwElySeRohLfg8lvOSzbrX6abf/8ik8ptk49XbzdShgrnalvl7CM6MjcskfM7MMqQ==, registry: http://registry.npm.faidev.cc/, tarball: https://registry.npmmirror.com/inversify-binding-decorators/-/inversify-binding-decorators-4.0.0.tgz}
-    name: inversify-binding-decorators
-    version: 4.0.0
-    dev: false
-
-  registry.npmmirror.com/inversify/6.0.1:
-    resolution: {integrity: sha512-B3ex30927698TJENHR++8FfEaJGqoWOgI6ZY5Ht/nLUsFCwHn6akbwtnUAPCgUepAnTpe2qHxhDNjoKLyz6rgQ==, registry: http://registry.npm.faidev.cc/, tarball: https://registry.npmmirror.com/inversify/-/inversify-6.0.1.tgz}
-    name: inversify
-    version: 6.0.1
-    dev: false
-
   registry.npmmirror.com/ipaddr.js/1.9.1:
     resolution: {integrity: sha512-0KI/607xoxSToH7GjN1FfSbLoU0+btTicjsQSWQlh/hZykN8KpmMf7uYwPW3R+akZ6R/w18ZlXSHBYXiYUPO3g==, registry: http://registry.npm.faidev.cc/, tarball: https://registry.npmmirror.com/ipaddr.js/-/ipaddr.js-1.9.1.tgz}
     name: ipaddr.js
@@ -2434,12 +2416,6 @@ packages:
     engines: {node: '>=8.10.0'}
     dependencies:
       picomatch: registry.npmmirror.com/picomatch/2.3.1
-
-  registry.npmmirror.com/reflect-metadata/0.1.13:
-    resolution: {integrity: sha512-Ts1Y/anZELhSsjMcU605fU9RE4Oi3p5ORujwbIKXfWa+0Zxs510Qrmrce5/Jowq3cHSZSJqBjypxmHarc+vEWg==, registry: http://registry.npm.faidev.cc/, tarball: https://registry.npmmirror.com/reflect-metadata/-/reflect-metadata-0.1.13.tgz}
-    name: reflect-metadata
-    version: 0.1.13
-    dev: false
 
   registry.npmmirror.com/requires-port/1.0.0:
     resolution: {integrity: sha512-KigOCHcocU3XODJxsu8i/j8T9tzT4adHiecwORRQ0ZZFcp7ahwXuRU1m+yuO90C5ZUyGeGfocHDI14M3L3yDAQ==, registry: http://registry.npm.faidev.cc/, tarball: https://registry.npmmirror.com/requires-port/-/requires-port-1.0.0.tgz}
