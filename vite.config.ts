@@ -4,6 +4,7 @@ import path from "path";
 import vueJsx from "@vitejs/plugin-vue-jsx";
 import basicSsl from "@vitejs/plugin-basic-ssl";
 import proxy from "vite-plugin-http2-proxy";
+import Inspect from 'vite-plugin-inspect'
 // https://vitejs.dev/config/
 export default defineConfig({
   server: {
@@ -45,5 +46,9 @@ export default defineConfig({
         rewrite: (path) => path.replace(/^\/api/, ""),
       },
     }),
+    Inspect({
+      build: true,
+      outputDir: '.vite-inspect'
+    })
   ],
 });

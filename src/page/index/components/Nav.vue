@@ -7,7 +7,7 @@
                 :src="user?.avatarUrl"
             />
             <span>{{ getUserTip(user) }}</span>
-        </div>)
+        </div>
     </div>
 </template>
 <script lang="ts" setup>
