@@ -14,9 +14,10 @@
 import { SIGN_USER_TYPE } from '@/shared/contants/user';
 import User from '@/domain/user/entity/user.entity';
 import { UserService } from '../services';
-let user = $ref<null | User>(null)
+import { ref } from 'vue';
+let user = ref<null | User>(null)
 
-user = await UserService.getUserDetail()
+user.value = await UserService.getUserDetail()
 
 
 function getUserTip(user: User | null) {

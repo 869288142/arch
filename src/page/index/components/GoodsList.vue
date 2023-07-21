@@ -10,15 +10,15 @@
 import GoodsItem from "./GoodsItem";
 import Goods from "@/domain/good/entity/goods.entity";
 import { useSharedMouse } from "@/hooks";
-import { inject } from 'vue'
+import { inject, ref } from 'vue'
 import { goodsServiceToken } from "@/shared/contants/token";
 import  { GoodsService as  GoodsServiceImp} from "../services";
 
 const GoodsService = inject<typeof GoodsServiceImp>(goodsServiceToken)
 
-let goodsList = $ref<Goods[] | null>(null);
+let goodsList = ref<Goods[] | null>(null);
 
-goodsList = await GoodsService!.getGoodsList();
+goodsList.value = await GoodsService!.getGoodsList();
 
 const { x, y } = useSharedMouse()
 </script>

@@ -34,7 +34,6 @@ export default defineConfig({
   plugins: [
     vueJsx(),
     vue({
-      reactivityTransform: true,
     }),
     basicSsl(),
     proxy({
