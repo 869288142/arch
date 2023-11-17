@@ -15,6 +15,7 @@ const { x, y } = useSharedMouse()
 <template>
   <index ></index>
   <div> {{ x }}  {{y}}</div>
+  <el-button type="default">3232</el-button>
   <!-- <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" /> -->
 </template>
 

@@ -1,5 +1,5 @@
-const { goodsListData } = require('./data/goods');
-const { userInfo } = require('./data/user');
+const { goodsListData } = require('./data/goods.cjs');
+const { userInfo } = require('./data/user.cjs');
 
 module.exports = {
     // goods API

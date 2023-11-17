@@ -4,6 +4,6 @@ const apiMocker = require('mocker-api');
 
 const app = express();
 
-apiMocker(app, path.resolve('./mocker.js'))
+apiMocker(app, path.resolve('./mocker.cjs'))
 
 app.listen(5000);
