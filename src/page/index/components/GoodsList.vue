@@ -1,31 +1,24 @@
 <template>
-  <el-table border @header-contextmenu="" :data="tableData" style="width: 100%">
-    <el-table-column prop="date" label="Date" width="180" />
-    <el-table-column prop="name" label="Name" width="180" />
-    <el-table-column prop="address" label="Address" />
-  </el-table>
+  <h3>商品列表</h3>
+  <h3>{{x}}{{y}}</h3>
+  <div class="goods-list">
+    <GoodsItem v-for="goods in goodsList" :goods="goods" />
+  </div>
 </template>
 <script lang="ts" setup>
-const tableData = [
-  {
-    date: '2016-05-03',
-    name: 'Tom',
-    address: 'No. 189, Grove St, Los Angeles',
-  },
-  {
-    date: '2016-05-02',
-    name: 'Tom',
-    address: 'No. 189, Grove St, Los Angeles',
-  },
-  {
-    date: '2016-05-04',
-    name: 'Tom',
-    address: 'No. 189, Grove St, Los Angeles',
-  },
-  {
-    date: '2016-05-01',
-    name: 'Tom',
-    address: 'No. 189, Grove St, Los Angeles',
-  },
-]
+
+import GoodsItem from "./GoodsItem";
+import Goods from "@/domain/good/entity/goods.entity";
+import { useSharedMouse } from "@/hooks";
+import { inject, ref } from 'vue'
+import { goodsServiceToken } from "@/shared/contants/token";
+import  { GoodsService as  GoodsServiceImp} from "../services";
+
+const GoodsService = inject<typeof GoodsServiceImp>(goodsServiceToken)
+
+let goodsList = ref<Goods[] | null>(null);
+
+goodsList.value = await GoodsService!.getGoodsList();
+
+const { x, y } = useSharedMouse()
 </script>
