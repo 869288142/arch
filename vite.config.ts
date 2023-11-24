@@ -4,13 +4,11 @@ import path from "path";
 import vueJsx from "@vitejs/plugin-vue-jsx";
 import basicSsl from "@vitejs/plugin-basic-ssl";
 import proxy from "vite-plugin-http2-proxy";
-import Inspect from 'vite-plugin-inspect'
+import Inspect from "vite-plugin-inspect";
 // https://vitejs.dev/config/
 export default defineConfig({
   server: {
-    https: {
-      
-    },
+    https: {},
     fs: {
       strict: false,
       // Allow serving files from one level up to the project root
@@ -36,6 +34,10 @@ export default defineConfig({
   plugins: [
     vueJsx(),
     vue({
+      script: {
+        propsDestructure: true,
+        defineModel: true,
+      },
     }),
     basicSsl(),
     proxy({
@@ -49,7 +51,7 @@ export default defineConfig({
     }),
     Inspect({
       build: true,
-      outputDir: '.vite-inspect'
-    })
+      outputDir: ".vite-inspect",
+    }),
   ],
 });
