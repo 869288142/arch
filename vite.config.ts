@@ -30,7 +30,15 @@ export default defineConfig({
       "@": path.resolve(__dirname, "src"),
     },
   },
-
+  build: {
+    cssMinify: "lightningcss",
+  },
+  // optimizeDeps: {
+  //   disabled: false,
+  // },
+  // css: {
+  //   transformer: "lightningcss"
+  // },
   plugins: [
     vueJsx(),
     vue({
