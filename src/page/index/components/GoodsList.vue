@@ -2,7 +2,7 @@
   <h3>商品列表</h3>
   <h3>{{x}}{{y}}</h3>
   <div class="goods-list">
-    <GoodsItem v-for="goods in goodsList" :goods="goods" />
+    <GoodsItem v-for="goods in goodsList" :goods />
   </div>
 </template>
 <script lang="ts" setup>
