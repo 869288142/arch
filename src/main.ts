@@ -6,7 +6,6 @@ import { GoodsService } from "./page/index/services";
 const app = createApp(App)
 
 app.provide(/* key */ goodsServiceToken, /* value */ GoodsService)
-app.use(ElementPlus)
 app.use(createPinia()).mount("#app");
 
 
