@@ -4,15 +4,11 @@ import path from "path";
 import vueJsx from "@vitejs/plugin-vue-jsx";
 import basicSsl from "@vitejs/plugin-basic-ssl";
 import proxy from "vite-plugin-http2-proxy";
-import Inspect from "vite-plugin-inspect";
-// https://vitejs.dev/config/
 export default defineConfig({
   server: {
     https: {},
     fs: {
       strict: false,
-      // Allow serving files from one level up to the project root
-      // allow: ['..']
     },
 
     // proxy: {
@@ -33,12 +29,13 @@ export default defineConfig({
   build: {
     cssMinify: "lightningcss",
   },
-  // optimizeDeps: {
-  //   disabled: false,
-  // },
-  // css: {
-  //   transformer: "lightningcss"
-  // },
+  optimizeDeps: {
+  },
+  css: {
+    transformer: "lightningcss",
+    lightningcss: {
+    }
+  },
   plugins: [
     vueJsx(),
     vue({
@@ -55,10 +52,6 @@ export default defineConfig({
         secure: false,
         rewrite: (path) => path.replace(/^\/api/, ""),
       },
-    }),
-    Inspect({
-      build: true,
-      outputDir: ".vite-inspect",
     }),
   ],
 });
