@@ -32,9 +32,9 @@ export default defineConfig({
   optimizeDeps: {
   },
   css: {
-    transformer: "lightningcss",
-    lightningcss: {
-    }
+    // transformer: "lightningcss",
+    // lightningcss: {
+    // }
   },
   plugins: [
     vueJsx(),
