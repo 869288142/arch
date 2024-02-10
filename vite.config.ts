@@ -30,8 +30,10 @@ export default defineConfig({
     cssMinify: "lightningcss",
   },
   optimizeDeps: {
+    holdUntilCrawlEnd: false
   },
   css: {
+    preprocessorMaxWorkers: true
     // transformer: "lightningcss",
     // lightningcss: {
     // }
