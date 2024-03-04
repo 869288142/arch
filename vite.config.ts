@@ -4,6 +4,8 @@ import path from "path";
 import vueJsx from "@vitejs/plugin-vue-jsx";
 import basicSsl from "@vitejs/plugin-basic-ssl";
 import proxy from "vite-plugin-http2-proxy";
+import UnoCSS from "unocss/vite";
+import { presetUno } from "unocss";
 export default defineConfig({
   server: {
     https: {},
@@ -30,13 +32,12 @@ export default defineConfig({
     cssMinify: "lightningcss",
   },
   optimizeDeps: {
-    holdUntilCrawlEnd: false
+    holdUntilCrawlEnd: false,
   },
   css: {
-    preprocessorMaxWorkers: true
-    // transformer: "lightningcss",
-    // lightningcss: {
-    // }
+    preprocessorMaxWorkers: true,
+    transformer: "lightningcss",
+    lightningcss: {},
   },
   plugins: [
     vueJsx(),
@@ -54,6 +55,9 @@ export default defineConfig({
         secure: false,
         rewrite: (path) => path.replace(/^\/api/, ""),
       },
+    }),
+    UnoCSS({
+      presets: [presetUno()],
     }),
   ],
 });
