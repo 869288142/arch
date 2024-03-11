@@ -9,15 +9,16 @@
     "preinstall": "npx only-allow pnpm"
   },
   "dependencies": {
+    "@tailwindcss/vite": "4.0.0-alpha.7",
     "@vueuse/core": "^10.9.0",
     "axios": "^1.6.7",
     "dayjs": "^1.11.10",
     "pinia": "^2.1.7",
     "sass": "^1.71.1",
+    "tailwindcss": "4.0.0-alpha.7",
     "vue": "^3.4.21"
   },
   "devDependencies": {
-    "@unocss/reset": "^0.58.5",
     "@vitejs/plugin-basic-ssl": "^1.1.0",
     "@vitejs/plugin-vue": "^5.0.4",
     "@vitejs/plugin-vue-jsx": "^3.1.0",
@@ -27,7 +28,6 @@
     "mocker-api": "^2.9.10",
     "postcss": "^8.4.35",
     "typescript": "^5.3.3",
-    "unocss": "^0.58.5",
     "vite": "5.1.4",
     "vite-plugin-http2-proxy": "^0.4.1",
     "vite-plugin-inspect": "^0.8.3",
