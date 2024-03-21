@@ -11,7 +11,7 @@
   "dependencies": {
     "@tailwindcss/vite": "4.0.0-alpha.7",
     "@vueuse/core": "^10.9.0",
-    "axios": "^1.6.7",
+    "axios": "^1.6.8",
     "dayjs": "^1.11.10",
     "pinia": "^2.1.7",
     "sass": "^1.72.0",
@@ -22,15 +22,15 @@
     "@vitejs/plugin-basic-ssl": "^1.1.0",
     "@vitejs/plugin-vue": "^5.0.4",
     "@vitejs/plugin-vue-jsx": "^3.1.0",
-    "autoprefixer": "^10.4.18",
+    "autoprefixer": "^10.4.19",
     "express": "^4.18.3",
     "lightningcss": "^1.24.1",
     "mocker-api": "^2.9.10",
-    "postcss": "^8.4.35",
-    "typescript": "^5.4.2",
-    "vite": "5.1.6",
+    "postcss": "^8.4.38",
+    "typescript": "^5.4.3",
+    "vite": "5.2.2",
     "vite-plugin-http2-proxy": "^0.4.1",
     "vite-plugin-inspect": "^0.8.3",
-    "vue-tsc": "^2.0.6"
+    "vue-tsc": "^2.0.7"
   }
 }
