@@ -28,7 +28,7 @@
     "mocker-api": "^2.9.10",
     "postcss": "^8.4.38",
     "typescript": "^5.4.3",
-    "vite": "5.2.2",
+    "vite": "5.2.6",
     "vite-plugin-http2-proxy": "^0.4.1",
     "vite-plugin-inspect": "^0.8.3",
     "vue-tsc": "^2.0.7"
