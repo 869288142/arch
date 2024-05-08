@@ -13,8 +13,8 @@
     "axios": "^1.6.8",
     "dayjs": "^1.11.11",
     "pinia": "^2.1.7",
-    "sass": "^1.76.0",
-    "vue": "^3.4.26"
+    "sass": "^1.77.0",
+    "vue": "^3.4.27"
   },
   "devDependencies": {
     "@tailwindcss/vite": "4.0.0-alpha.14",
