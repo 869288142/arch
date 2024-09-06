@@ -5,6 +5,7 @@ import vueJsx from "@vitejs/plugin-vue-jsx";
 import basicSsl from "@vitejs/plugin-basic-ssl";
 import proxy from "vite-plugin-http2-proxy";
 import tailwindcss from '@tailwindcss/vite'
+import VueMacros from 'unplugin-vue-macros/vite'
 export default defineConfig({
   server: {
     https: {},
@@ -39,10 +40,16 @@ export default defineConfig({
     lightningcss: {},
   },
   plugins: [
-    vueJsx(),
-    vue({
-      script: {
+    VueMacros({
+      plugins: {
+        vue: vue({
+          include: [/\.vue$/, /\.setup\.[cm]?[jt]sx?$/],
+        }),
+        vueJsx: vueJsx(), // if needed
       },
+      defineRender: true,
+      setupSFC: true,
+      exportRender: true
     }),
     basicSsl(),
     proxy({

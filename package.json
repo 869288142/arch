@@ -28,6 +28,7 @@
     "postcss": "^8.4.45",
     "tailwindcss": "4.0.0-alpha.17",
     "typescript": "^5.5.4",
+    "unplugin-vue-macros": "^2.11.7",
     "vite": "5.4.3",
     "vite-plugin-http2-proxy": "^0.4.3",
     "vite-plugin-inspect": "^0.8.7",

@@ -1,11 +1,3 @@
-<template>
-  <span>{{ searchTitle }}</span>
-  <input
-    :value="modelValue"
-    @input="handleInput"
-  />
-</template>
-<script lang="ts" setup>
 import { ref } from "vue";
 
 const { searchTitle = "hello" } = defineProps<{
@@ -21,4 +13,11 @@ defineExpose({
 function handleInput(event : Event) {
   model.value = (event.target as HTMLInputElement).value
 }
-</script>
+
+export default () => {
+  return (<><span>{ searchTitle }</span>
+  <input
+    value={model.value}
+    onInput={handleInput}
+  /></>)
+}

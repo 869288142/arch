@@ -17,7 +17,15 @@
     "paths": {
       "@/*": ["src/*"]
     },
-    "jsxImportSource":"vue"
+    "jsxImportSource":"vue",
+    "types": ["unplugin-vue-macros/macros-global" /* ... */]
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "src/domain/good/repository/model/Tag.modelts"]
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "src/domain/good/repository/model/Tag.modelts"],
+  "vueCompilerOptions": {
+    "plugins": ["unplugin-vue-macros/volar"],
+    "vueMacros": {
+      "setupSFC": true,
+      "exportRender": true,
+    },
+  },
 }

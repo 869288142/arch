@@ -19,7 +19,7 @@
 defineOptions({
   name: "Nav",
 });
-import Search from "./search.vue";
+import Search from "./search.setup.tsx";
 import { SIGN_USER_TYPE } from "@/shared/contants/user";
 import User from "@/domain/user/entity/user.entity";
 import { UserService } from "../services";
