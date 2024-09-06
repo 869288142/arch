@@ -16,22 +16,23 @@
   <div>{{ searchText }}</div>
 </template>
 <script lang="ts" setup>
-defineOptions({
-  name: "Nav",
-});
 import Search from "./search.setup.tsx";
 import { SIGN_USER_TYPE } from "@/shared/contants/user";
 import User from "@/domain/user/entity/user.entity";
 import { UserService } from "../services";
-import { ref } from "vue";
+import { ref, type Ref } from "vue";
 import { useTemplateRef } from "vue";
-let user = ref<null | User>(null);
+defineOptions({
+  name: "Nav",
+});
+
+let user = ref() as unknown as Ref<User>;
 const searchText = ref("");
 user.value = await UserService.getUserDetail();
 const searchRefKey = 'search'
 const searchRef = useTemplateRef<InstanceType<typeof Search>>(searchRefKey);
 
-function getUserTip(user: User | null) {
+function getUserTip(user: User) {
   if (!user) {
     return "";
   }

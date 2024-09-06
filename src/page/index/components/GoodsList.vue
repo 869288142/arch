@@ -6,19 +6,17 @@
   </div>
 </template>
 <script lang="ts" setup>
-defineOptions({
-  name: 'goodsList'
-}) 
 import GoodsItem from "./GoodsItem";
 import Goods from "@/domain/good/entity/goods.entity";
 import { useSharedMouse } from "@/hooks";
 import { inject, ref } from 'vue'
 import { goodsServiceToken } from "@/shared/contants/token";
-
+defineOptions({
+  name: 'goodsList'
+}) 
 const GoodsService = inject(goodsServiceToken)
-let goodsList = ref<Goods[] | null>(null);
+let goodsList = ref<Goods[]>();
 
 goodsList.value = await GoodsService!.getGoodsList();
-
 const { x, y } = useSharedMouse()
 </script>
