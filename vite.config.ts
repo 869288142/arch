@@ -42,7 +42,6 @@ export default defineConfig({
     vueJsx(),
     vue({
       script: {
-        propsDestructure: true,
       },
     }),
     basicSsl(),
