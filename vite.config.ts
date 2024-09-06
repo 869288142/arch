@@ -49,7 +49,6 @@ export default defineConfig({
       },
       defineRender: true,
       setupSFC: true,
-      exportRender: true
     }),
     basicSsl(),
     proxy({

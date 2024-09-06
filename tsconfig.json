@@ -25,7 +25,7 @@
     "plugins": ["unplugin-vue-macros/volar"],
     "vueMacros": {
       "setupSFC": true,
-      "exportRender": true,
-    },
-  },
+      "exportRender": true
+    }
+  }
 }
