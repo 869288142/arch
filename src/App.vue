@@ -17,4 +17,9 @@ defineOptions({
 </template>
 
 <style>
+ @reference "tailwindcss/theme";
+.select2-dropdown {
+  @apply rounded-b-lg shadow-md;
+}
+
 </style>
