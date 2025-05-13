@@ -23,3 +23,11 @@ defineOptions({
 }
 
 </style>
+<style lang="scss">
+.a {
+  .c{
+    background-color: antiquewhite;
+  } 
+}
+
+</style>
