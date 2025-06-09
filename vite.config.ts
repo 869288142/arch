@@ -31,11 +31,7 @@ export default defineConfig({
   build: {
     cssMinify: "lightningcss",
   },
-  optimizeDeps: {
-    holdUntilCrawlEnd: false,
-  },
   css: {
-    preprocessorMaxWorkers: true,
     transformer: "lightningcss",
     lightningcss: {},
   },
